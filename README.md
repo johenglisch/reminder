@@ -15,8 +15,11 @@ user is reminded of their agenda on every system start.
 
 ## USAGE
 
-TODO
+The programme is reading the TODO data from a simple plain text file.  Each
+non-empty line in the file is considered a TODO list item.  The name of the TODO
+file can be specified as a command-line argument.  If no command-line arguments
+are supplied `Reminder` defaults to using the file `$HOME/TODO`.
 
 ## LICENSE
 
-TODO
+See `LICENSE` file.
