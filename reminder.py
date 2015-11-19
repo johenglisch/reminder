@@ -18,7 +18,7 @@ def make_window(label):
     win.add(Gtk.Label(label=label))
 
     win.connect('delete-event', Gtk.main_quit)
-    return window
+    return win
 
 
 def main():
