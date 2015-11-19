@@ -2,7 +2,6 @@
 
 
 import sys
-import re
 from os.path import expanduser
 
 import gi
