@@ -13,6 +13,14 @@ from gi.repository import Gtk
 TODO_FILE = expanduser('~/TODO')
 
 
+def make_window():
+    win = Gtk.Window(title='TODO')
+    win.add(Gtk.Label(label=todo_items))
+
+    win.connect('delete-event', Gtk.main_quit)
+    return window
+
+
 def main():
     filename = sys.argv[1] if len(sys.argv) > 1 else TODO_FILE
 
@@ -25,11 +33,7 @@ def main():
         print(error, file=sys.stderr)
         return
 
-    win = Gtk.Window(title='TODO')
-    win.add(Gtk.Label(label=todo_items))
-
-    win.connect('delete-event', Gtk.main_quit)
-
+    win = make_window()
     win.show_all()
     Gtk.main()
 
