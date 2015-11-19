@@ -14,8 +14,10 @@ TODO_FILE = expanduser('~/TODO')
 
 
 def main():
+    filename = sys.argv[1] if len(sys.argv) > 1 else TODO_FILE
+
     try:
-        with open(TODO_FILE, 'r', encoding='UTF-8') as todo_file:
+        with open(filename, 'r', encoding='UTF-8') as todo_file:
             todo_items = '\n'.join(
                 ' - {} '.format(line.strip()) for line in todo_file
                 if line and not line.isspace())
