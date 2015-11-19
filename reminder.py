@@ -13,9 +13,9 @@ from gi.repository import Gtk
 TODO_FILE = expanduser('~/TODO')
 
 
-def make_window():
+def make_window(label):
     win = Gtk.Window(title='TODO')
-    win.add(Gtk.Label(label=todo_items))
+    win.add(Gtk.Label(label=label))
 
     win.connect('delete-event', Gtk.main_quit)
     return window
@@ -36,7 +36,7 @@ def main():
     if not todo_items:
         return
 
-    win = make_window()
+    win = make_window(todo_items)
     win.show_all()
     Gtk.main()
 
