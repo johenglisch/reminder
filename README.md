@@ -10,7 +10,8 @@ user is reminded of their agenda on every system start.
 
 ## REQUIREMENTS
 
-TODO
+ * Python3
+ * PyGObject3
 
 ## USAGE
 
