@@ -33,6 +33,9 @@ def main():
         print(error, file=sys.stderr)
         return
 
+    if not todo_items:
+        return
+
     win = make_window()
     win.show_all()
     Gtk.main()
