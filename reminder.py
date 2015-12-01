@@ -21,7 +21,7 @@ def make_window(text):
     box.add(label)
     box.add(button)
 
-    win = Gtk.Window(title='TODO')
+    win = Gtk.Window(title='TODO', window_position=Gtk.WindowPosition.CENTER)
     win.connect('delete-event', Gtk.main_quit)
     win.add(box)
 
